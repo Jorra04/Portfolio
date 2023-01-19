@@ -2,7 +2,7 @@ import Image from "next/image";
 import logo from "../../public/logo.png"
 function Navbar() {
     return (
-        <nav className="py-10 mb-12 flex justify-between">
+        <nav className="py-10 mb-12 flex justify-between ">
             <Image alt="J S representing the initials of the creator of this site, Jorra Singh" src={logo} height={40} width={40} />
             <ul className=" flex items-center">
               <li className="px-2">
