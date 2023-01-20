@@ -59,8 +59,8 @@ function Navbar() {
           <a
             href="#"
             className={` ${
-              !isOpen ? "bg-black rounded-lg px-2 py-2" : "text-black pl-1"
-            } block mt-4 lg:inline-block lg:mt-0 text-white `}
+              !isOpen ? "bg-black rounded-lg px-2 py-2 text-white " : "text-black pl-1"
+            } block mt-4 lg:inline-block lg:mt-0  `}
           >
             Resume
           </a>
