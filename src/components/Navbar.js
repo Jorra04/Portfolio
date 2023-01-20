@@ -32,38 +32,38 @@ function Navbar() {
             isOpen ? " border-2" : ""
           } text-sm lg:flex-grow rounded-md`}
         >
-          <a
-            href="#"
+          <Link
+            href="learning"
             className={` ${
               isOpen ? " pl-1 border-b-2" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
           >
             What I'm Learning
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/projects"
             className={` ${
               isOpen ? " pl-1 border-b-2" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
           >
             Projects
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/about"
             className={` ${
               isOpen ? " pl-1 border-b-2" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4 `}
           >
             About Me
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/resume"
             className={` ${
               !isOpen ? "bg-black rounded-lg px-2 py-2 text-white " : "text-black pl-1"
             } block mt-4 lg:inline-block lg:mt-0  `}
           >
             Resume
-          </a>
+          </Link>
         </div>
       </div>
       <div className="block lg:hidden">
