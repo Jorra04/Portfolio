@@ -1,0 +1,72 @@
+.scrolingWords {
+    display: block;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 1.5rem/* 24px */;
+    line-height: 2rem/* 32px */;
+    animation: spin_words 10s infinite;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.outterContainer {
+    display: flex;
+    height: 30%;
+}
+
+@media (min-width: 768px) {
+    .outterContainer {
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 0px) {
+    .outterContainer {
+        flex-direction : column;
+    }
+    .scrolingWords {
+        text-align: center;
+    }
+}
+
+.words {
+    text-align: left;
+    overflow: hidden;
+    justify-items: center;
+    min-height: fit-content;
+}
+
+@keyframes spin_words {
+
+    10% {
+        transform: translateY(-102%);
+    }
+    25% {
+        transform: translateY(-99%);
+    }
+    35% {
+        transform: translateY(-202%);
+    }
+    50% {
+        transform: translateY(-199%);
+    }
+    60% {
+        transform: translateY(-302%);
+    }
+    75% {
+        transform: translateY(-299%);
+    }
+    85% {
+        transform: translateY(-402%);
+    }
+    100% {
+        transform: translateY(-399%);
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+}
