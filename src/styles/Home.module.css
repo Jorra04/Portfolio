@@ -5,6 +5,8 @@
     font-size: 1.5rem/* 24px */;
     line-height: 2rem/* 32px */;
     animation: spin_words 10s infinite;
+    /* padding-top: 5px;
+    padding-bottom: 8px; */
 }
 
 .outterContainer {
@@ -12,9 +14,27 @@
     height: 30%;
 }
 
+@media (min-width: 768px) {
+    .outterContainer {
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 0px) {
+    .outterContainer {
+        flex-direction : column;
+    }
+    .scrolingWords {
+        text-align: center;
+    }
+}
+
 .words {
     text-align: left;
     overflow: hidden;
+    justify-items: center;
+    min-height: fit-content;
 }
 
 @keyframes spin_words {

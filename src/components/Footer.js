@@ -9,40 +9,41 @@ import Link from "next/link";
 const GITHU_LINK = "https://github.com/jorra04";
 const LINKEDIN_LINK = "https://www.linkedin.com/in/jorrasingh/";
 const TWITTER_LINK = "https://twitter.com";
+const emailBody = `Hello, Jorra!
 
-const emailBody =
-  "Hello, Jorra!\n\nWe would love to get in contact with you for an interview at <company name>. Please let us know when you are free to meet with us!";
+We would love to get in contact with you for an interview at <company name>. Please let us know when you are free to meet with us!
+
+All the best.
+
+Sincerely,
+[Your Name]`;
 
 const encodedEmailBody = encodeURIComponent(emailBody);
+
 function Footer() {
   return (
-    <div className="h-full flex flex-col ">
-      <hr></hr>
-      <div className="text-5xl pt-5 flex justify-center items-center gap-16 h-full">
+    <>
+      <hr className="border-t-2"></hr>
+      <div className="pt-5 flex justify-center items-center gap-16 h-full">
         <Link href={TWITTER_LINK}>
-          <AiFillTwitterCircle />
+          <AiFillTwitterCircle className="text-4xl" />
         </Link>
 
         <Link href={LINKEDIN_LINK}>
-          <AiFillLinkedin />
+          <AiFillLinkedin className="text-4xl" />
         </Link>
 
-        <Link
-          href=""
-          onClick={() =>
+        <AiFillMail className="text-4xl cursor-pointer" onClick={() =>
             window.open(
               `mailto:jorrasingh04@gmail.com?subject=Interview Request!&body=${encodedEmailBody}`
             )
-          }
-        >
-          <AiFillMail />
-        </Link>
+          } />
 
         <Link href={GITHU_LINK}>
-          <AiFillGithub />
+          <AiFillGithub className="text-4xl" />
         </Link>
       </div>
-    </div>
+    </>
   );
 }
 
