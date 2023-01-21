@@ -57,7 +57,8 @@ function Navbar() {
             About Me
           </Link>
           <Link
-            href="/resume"
+            href="../static/Resume.pdf"
+            target="_blank"
             className={` ${
               !isOpen ? "bg-black rounded-lg px-2 py-2 text-white " : "text-black pl-1"
             } block mt-4 lg:inline-block lg:mt-0  `}
