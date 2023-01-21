@@ -3,14 +3,27 @@ import logo from "../../public/logo.png";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    console.log(href);
+    console.log(router.pathname);
+    if (href !== router.pathname) {
+      router.push(href);
+    }
+  };
+
   return (
-    <nav className="flex justify-between pt-4">
+    <nav className=" flex justify-between pt-4">
       <div className="flex items-center">
-        <Link href='/'>
+        <Link href="/" onClick={handleClick}>
           <Image
             className={` ${
               isOpen ? "hidden" : "block"
@@ -37,6 +50,7 @@ function Navbar() {
             className={` ${
               isOpen ? " pl-1 border-b-2" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
+            onClick={handleClick}
           >
             What I'm Learning
           </Link>
@@ -45,6 +59,7 @@ function Navbar() {
             className={` ${
               isOpen ? " pl-1 border-b-2" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
+            onClick={handleClick}
           >
             Projects
           </Link>
@@ -53,14 +68,18 @@ function Navbar() {
             className={` ${
               isOpen ? " pl-1 border-b-2" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4 `}
+            onClick={handleClick}
           >
             About Me
           </Link>
           <Link
             href="/resume"
             className={` ${
-              !isOpen ? "bg-black rounded-lg px-2 py-2 text-white " : "text-black pl-1"
+              !isOpen
+                ? "bg-black rounded-lg px-2 py-2 text-white "
+                : "text-black pl-1"
             } block mt-4 lg:inline-block lg:mt-0  `}
+            onClick={handleClick}
           >
             Resume
           </Link>
