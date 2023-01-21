@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 import Link from "next/link";
 
-const GITHU_LINK = "https://github.com/jorra04";
+const GITHUB_LINK = "https://github.com/jorra04";
 const LINKEDIN_LINK = "https://www.linkedin.com/in/jorrasingh/";
 const TWITTER_LINK = "https://twitter.com";
 const emailBody = `Hello, Jorra!
@@ -39,7 +39,7 @@ function Footer() {
             )
           } />
 
-        <Link href={GITHU_LINK}>
+        <Link href={GITHUB_LINK}>
           <AiFillGithub className="text-4xl" />
         </Link>
       </div>

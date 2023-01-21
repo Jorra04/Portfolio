@@ -1,0 +1,35 @@
+.LearningCard_div {
+  /* background-image: url("../../public/ecommerce.png"); */
+  /* background-size: cover;
+  background-position: center center; */
+  
+  overflow: hidden;
+}
+
+.LearningCard_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.LearningCard_shadowDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.90);
+}
+
+.LearningCard_div,
+.LearningCard_shadowDiv {
+  border-radius: 0.5rem;
+  transition: 1s ease-in-out;
+  
+}
+
+.LearningCard_div:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.95);
+}
