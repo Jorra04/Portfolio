@@ -3,14 +3,30 @@ import logo from "../../public/logo.png";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    if (href !== router.pathname) {
+      router.push(href);
+    }
+
+    if(isOpen) {
+      setIsOpen(!isOpen);
+    }
+    
+  };
+
   return (
-    <nav className="flex justify-between pt-4">
+    <nav className=" flex justify-between pt-4 relative z-10">
       <div className="flex items-center">
-        <Link href='/'>
+        <Link href="/" onClick={handleClick}>
           <Image
             className={` ${
               isOpen ? "hidden" : "block"
@@ -35,24 +51,27 @@ function Navbar() {
           <Link
             href="learning"
             className={` ${
-              isOpen ? " pl-1 border-b-2" : ""
+              isOpen ? " pl-1 border-b-2 bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
+            onClick={handleClick}
           >
             What I'm Learning
           </Link>
           <Link
             href="/projects"
             className={` ${
-              isOpen ? " pl-1 border-b-2" : ""
+              isOpen ? " pl-1 border-b-2  bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
+            onClick={handleClick}
           >
             Projects
           </Link>
           <Link
             href="/about"
             className={` ${
-              isOpen ? " pl-1 border-b-2" : ""
+              isOpen ? " pl-1 border-b-2  bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4 `}
+            onClick={handleClick}
           >
             About Me
           </Link>
@@ -60,8 +79,11 @@ function Navbar() {
             href="../static/Resume.pdf"
             target="_blank"
             className={` ${
-              !isOpen ? "bg-black rounded-lg px-2 py-2 text-white " : "text-black pl-1"
+              !isOpen
+                ? "bg-black rounded-lg px-2 py-2 text-white "
+                : "text-black pl-1  bg-white"
             } block mt-4 lg:inline-block lg:mt-0  `}
+            onClick={handleClick}
           >
             Resume
           </Link>
