@@ -1,0 +1,19 @@
+
+@media (min-width: 768px) {
+    .paragraphContainer {
+        height: auto;
+    }
+    
+ }
+ @media (min-width: 1024px) { 
+    .paragraphContainer {
+        height: inherit;
+    }
+ }
+
+
+ @media (min-width: 1536px) { 
+    .paragraphContainer {
+        height: auto;
+    }
+ }
