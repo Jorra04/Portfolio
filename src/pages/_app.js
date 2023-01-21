@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
         <section className="h-1/6">
           <Navbar/>
         </section>
-        <section className="h-4/6 flex flex-col justify-center">
+        <section className="h-4/6 flex flex-col md:justify-center">
           <Component {...pageProps} />
         </section>
         <section className="h-1/6">

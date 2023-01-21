@@ -9,6 +9,8 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
+  const GITHUB_LINK = "https://github.com/jorra04";
+
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -46,7 +48,7 @@ function Navbar() {
         <div
           className={` ${
             isOpen ? " border-2" : ""
-          } text-sm lg:flex-grow rounded-md`}
+          } text-sm lg:flex-grow rounded-md bg-white`}
         >
           <Link
             href="learning"
@@ -58,7 +60,7 @@ function Navbar() {
             What I'm Learning
           </Link>
           <Link
-            href="/projects"
+            href={GITHUB_LINK}
             className={` ${
               isOpen ? " pl-1 border-b-2  bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
