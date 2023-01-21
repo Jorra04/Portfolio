@@ -7,7 +7,7 @@ const paragraph = "I am a fourth-year Software Engineering student at York Unive
 function About() {
 
     return (
-        <div className=" flex h-full w-full justify-center items-center">
+        <div className=" flex h-full w-full justify-center items-center ">
             <div className="basis-1/4">
                 <h1 className="lg:text-8xl md:text-7xl sm:text-6xl xsm:text-5xl xxsm:text-4xl">Hello! I am <span className={styles.rotateNameColour}>Jorra Singh</span>.</h1>
             </div>

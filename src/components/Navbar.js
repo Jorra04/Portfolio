@@ -17,11 +17,14 @@ function Navbar() {
       router.push(href);
     }
 
-    setIsOpen(!isOpen);
+    if(isOpen) {
+      setIsOpen(!isOpen);
+    }
+    
   };
 
   return (
-    <nav className=" flex justify-between pt-4">
+    <nav className=" flex justify-between pt-4 relative z-10">
       <div className="flex items-center">
         <Link href="/" onClick={handleClick}>
           <Image
@@ -48,7 +51,7 @@ function Navbar() {
           <Link
             href="learning"
             className={` ${
-              isOpen ? " pl-1 border-b-2" : ""
+              isOpen ? " pl-1 border-b-2 bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
             onClick={handleClick}
           >
@@ -57,7 +60,7 @@ function Navbar() {
           <Link
             href="/projects"
             className={` ${
-              isOpen ? " pl-1 border-b-2" : ""
+              isOpen ? " pl-1 border-b-2  bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4`}
             onClick={handleClick}
           >
@@ -66,7 +69,7 @@ function Navbar() {
           <Link
             href="/about"
             className={` ${
-              isOpen ? " pl-1 border-b-2" : ""
+              isOpen ? " pl-1 border-b-2  bg-white" : ""
             } block mt-4 lg:inline-block lg:mt-0 mr-4 `}
             onClick={handleClick}
           >
@@ -77,7 +80,7 @@ function Navbar() {
             className={` ${
               !isOpen
                 ? "bg-black rounded-lg px-2 py-2 text-white "
-                : "text-black pl-1"
+                : "text-black pl-1  bg-white"
             } block mt-4 lg:inline-block lg:mt-0  `}
             onClick={handleClick}
           >
