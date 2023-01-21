@@ -17,3 +17,22 @@
         height: auto;
     }
  }
+
+ .rotateNameColour {
+    color: transparent;
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f38c12);
+    animation: animate 5s linear infinite;
+    -webkit-background-clip: text;
+    background-size: 500%;
+    animation: animate 5s linear infinite;
+ }
+
+ @keyframes animate {
+    0% {
+        background-position: 0 100%;
+    }50% {
+        background-position: 100% 0;
+    }0% {
+        background-position: 0 100%;
+    }
+ }

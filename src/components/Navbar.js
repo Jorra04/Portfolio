@@ -13,11 +13,11 @@ function Navbar() {
   const handleClick = (e) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    console.log(href);
-    console.log(router.pathname);
     if (href !== router.pathname) {
       router.push(href);
     }
+
+    setIsOpen(!isOpen);
   };
 
   return (
