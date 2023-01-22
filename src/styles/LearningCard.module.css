@@ -24,12 +24,23 @@
 .LearningCard_div,
 .LearningCard_shadowDiv {
   border-radius: 0.5rem;
-  transition: 1s ease-in-out;
+ 
   
 }
 
 .LearningCard_div:hover {
   cursor: pointer;
-  transform: scale(1.05);
   background: rgba(0, 0, 0, 0.95);
 }
+
+.LearningCard_img {
+  transform-origin: center;
+  transition: transform 5s ease-in-out 
+}
+
+
+.LearningCard_div:hover .LearningCard_img {
+  transform: scale(1.6);
+  
+}
+
