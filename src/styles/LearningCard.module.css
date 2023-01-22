@@ -1,8 +1,8 @@
 .LearningCard_div {
-  /* background-image: url("../../public/ecommerce.png"); */
-  /* background-size: cover;
-  background-position: center center; */
-  
+  height: 250px;
+  max-width: 450px;
+
+  min-width: fit-content;
   overflow: hidden;
 }
 

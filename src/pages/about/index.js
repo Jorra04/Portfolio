@@ -7,16 +7,22 @@ const paragraph = "I am a fourth-year Software Engineering student at York Unive
 function About() {
 
     return (
-        <div className=" flex h-full w-full justify-center items-center ">
+        <>
+        <div className=" flex h-full w-full justify-center items-center md:flex-row xxsm:flex-col">
             <div className="basis-1/4">
-                <h1 className="lg:text-8xl md:text-7xl sm:text-6xl xsm:text-5xl xxsm:text-4xl">Hello! I am <span className={styles.rotateNameColour}>Jorra Singh</span>.</h1>
+                <h1 className=" xxsm:text-center md:text-left lg:text-8xl md:text-7xl sm:text-6xl xsm:text-5xl xxsm:text-4xl">Hello! I am <span className={styles.rotateNameColour}>Jorra Singh</span>.</h1>
             </div>
-            <div className="basis-3/4 flex justify-center items-center h-5/6 overflow-scroll">
+            <br/>
+            <br/>
+            <div className="basis-3/4 flex justify-center items-center h-5/6 ">
                 <div className={`lg:w-1/2 xxsm:w-3/4 xxsm:h-full md:h-auto ${styles.paragraphContainer}`}>
                     <p className=" xl:text-2xl  lg:text-lg md:text-base xxsm:text-sm ">{paragraph}</p>
                 </div>
             </div>
+            
         </div>
+        <br></br>
+        </>
     )
 }
 
