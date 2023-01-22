@@ -16,14 +16,14 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen px-10">
-        <section className="h-1/6">
+      <main className="h-screen px-10 flex flex-col">
+        <section className="h-1/6 mb-4">
           <Navbar/>
         </section>
-        <section className="h-4/6 flex flex-col md:justify-center">
+         <section className="flex flex-col md:justify-center">
           <Component {...pageProps} />
         </section>
-        <section className="h-1/6">
+        <section className="h-1/6 mt-auto">
           <Footer/>
         </section>
       </main>
