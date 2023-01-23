@@ -14,7 +14,7 @@ function About() {
             </div>
             <br/>
             <br/>
-            <div className="basis-3/4 flex justify-center items-center h-5/6 ">
+            <div className="basis-3/4 flex justify-center items-center h-fit ">
                 <div className={`lg:w-1/2 xxsm:w-3/4 xxsm:h-full md:h-auto ${styles.paragraphContainer}`}>
                     <p className=" xl:text-2xl  lg:text-lg md:text-base xxsm:text-sm ">{paragraph}</p>
                 </div>

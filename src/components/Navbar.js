@@ -47,7 +47,7 @@ function Navbar() {
       >
         <div
           className={` ${
-            isOpen ? " border-2" : ""
+            isOpen ? " border-2 " : ""
           } text-sm lg:flex-grow rounded-md bg-white`}
         >
           <Link
